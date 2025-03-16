@@ -8,11 +8,11 @@ app = Flask(__name__)
 def index():
     password = None
     if request.method == 'POST':
-        # Получаем длину пароля из формы
+        # получает длинну из формы
         length = int(request.form.get('length', 6))
-        # Генерируем пароль
+        # генерация пр
         password = generate_password(length)
-    # Отображаем страницу с формой и результатом
+    # Отображение страницы
     return render_template('index.html', password=password)
 
 if __name__ == '__main__':
