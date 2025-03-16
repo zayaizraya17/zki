@@ -2,12 +2,12 @@ import random
 import string
 
 def generate_password(length):
-    # Определение алфавита
+    # Алфавит
     alphabet = string.ascii_letters + string.digits
-    # Генерация пароля
+    # Генерируем
     password = ''.join(random.choice(alphabet) for _ in range(length))
     return password
 
-# Пример использования
+# прим
 password = generate_password(6)
 print("Сгенерированный пароль:", password)
